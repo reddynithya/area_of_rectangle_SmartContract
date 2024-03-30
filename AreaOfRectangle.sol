@@ -1,15 +1,12 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
-
-contract Rectangle {
-    // Define a struct to represent the rectangle
+contract RectangleArea {
     struct Rectangle {
-        uint256 length;
         uint256 width;
+        uint256 height;
     }
-    
-    // Function to calculate the area of a rectangle
-    function calculateArea(uint256 _length, uint256 _width) public pure returns (uint256) {
-        return _length * _width;
+    function calculateArea(uint256 _width, uint256 _height) public pure returns (uint256) {
+        uint256 area = _width * _height;
+        return area;
     }
 }
-
